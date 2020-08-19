@@ -1,12 +1,27 @@
 <template>
   <div id="app">
+    <TopBar />
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/doscg">DOSCG</router-link> |
+      <router-link to="/doscg/findabc">FindAbc</router-link> |
+      <router-link to="/doscg/findxyz">FindXyz</router-link> |
+      <router-link to="/doscg/googlemap">GoogleMap</router-link> |
+      <router-link to="/doscg/linebot">LineBot</router-link>
     </div>
-    <router-view/>
+    <div class="container-fluid">
+      <router-view />
+    </div>
   </div>
 </template>
+
+<script>
+import TopBar from "./components/Topbar.vue";
+export default {
+  components: {
+    TopBar,
+  },
+};
+</script>
 
 <style>
 #app {
